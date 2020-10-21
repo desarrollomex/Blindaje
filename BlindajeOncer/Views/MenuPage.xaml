@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BlindajeOncer.Views.MenuPage"
+             BindingContext="{Binding Main,Source={StaticResource Local}}"
+             Title="Menu">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+            BindingContext="{Binding Menu}"
+            Padding="5">
+            <Grid RowSpacing="10" ColumnSpacing="10" BackgroundColor="Gray" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <ImageButton x:Name="btnControl" Source="clientes.jpg" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" Clicked="ClientesPage"/>
+                <ImageButton x:Name="btnReservaciones" Source="empleados.png" Grid.Row="0" Grid.Column="1" Aspect="AspectFill"  Clicked="AsesoresPage"/>
+                <ImageButton x:Name="btnPagos" Source="empresa.jpg" Grid.Row="1" Grid.Column="0" Aspect="AspectFill" Clicked="EmpresaPage" />
+                <ImageButton Source="instalador.png" Grid.Row="1" Grid.Column="1" Aspect="AspectFill" Clicked="InstaladorPage"/>
+                <ImageButton Source="productos.png" Grid.Row="2" Grid.Column="0" Aspect="AspectFill" Clicked= "ProductosPage" />
+                <ImageButton Source="registro.jpg" Grid.Row="2" Grid.Column="1" Aspect="AspectFill"/>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
